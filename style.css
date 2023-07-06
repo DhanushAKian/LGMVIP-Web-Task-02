@@ -1,0 +1,81 @@
+.container .registration .form-group input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .container .registration .form-group input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+      .container {
+        display: flex;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .registration {
+        flex: 1;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: rgb(255, 199, 125);
+      }
+      .registration h2 {
+        text-align: center;
+      }
+      .form-group {
+        margin-bottom: 10px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+      .form-group input[type="text"],
+      .form-group input[type="email"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+      .form-group .radio-group {
+        display: flex;
+        align-items: center;
+      }
+      .form-group .radio-group label {
+        margin-right: 10px;
+      }
+      .form-group .checkbox-group label {
+        display: block;
+      }
+      .form-group .checkbox-group input {
+        margin-right: 5px;
+      }
+      .data-display {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+      }
+      .data-display h2 {
+        margin-bottom: 20px;
+      }
+      .data-display p {
+        margin-bottom: 5px;
+      }
+      .entry{
+          background-color: aquamarine;
+          padding-left: 10px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+      }
+      .h2{
+          background-color: rgb(0, 255, 170);
+          text-align: center;
+          padding-top: 10px;
+          padding-bottom: 10px;
+      }
+      body{
+          color: rgb(68, 12, 12);
+      }

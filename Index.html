@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Registration Form for LetsGrowMore| By Dhanush N</title>
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="registration">
+      <h2>Student Registration</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label>Gender:</label>
+          <div class="radio-group">
+            <label for="male">
+              <input type="radio" id="male" name="gender" value="Male" required>
+              Male
+            </label>
+            <label for="female">
+              <input type="radio" id="female" name="gender" value="Female" required>
+              Female
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Skills:</label>
+          <div class="checkbox-group">
+            <label for="java">
+              <input type="checkbox" id="java" name="skills[]" value="Java">
+              Java
+            </label>
+            <label for="html">
+              <input type="checkbox" id="html" name="skills[]" value="HTML">
+              HTML
+            </label>
+            <label for="cpp">
+              <input type="checkbox" id="cpp" name="skills[]" value="C++">
+              C++
+            </label>
+          </div>
+        </div>
+        <div class="form-group" id="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+    <div class="data-display">
+      <h2 class="h2">Registered Student Details:</h2>
+      <div id="output"></div>
+    </div>
+  </div>
+
+  <script>document.getElementById("registrationForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+  
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var gender = document.querySelector('input[name="gender"]:checked').value;
+    var skills = [];
+    var skillsInputs = document.querySelectorAll('input[name="skills[]"]:checked');
+    skillsInputs.forEach(function(input) {
+      skills.push(input.value);
+    });
+  
+    var output = document.getElementById("output");
+    var entry = document.createElement("div");
+    entry.classList.add("entry");
+    entry.innerHTML = "<p><strong>Name:</strong> " + name + "</p>" +
+      "<p><strong>Email:</strong> " + email + "</p>" +
+      "<p><strong>Gender:</strong> " + gender + "</p>" +
+      "<p><strong>Skills:</strong> " + skills.join(", ") + "</p>";
+  
+    output.appendChild(entry);
+  
+    document.getElementById("registrationForm").reset();
+  });</script>
+</body>
+</html>
