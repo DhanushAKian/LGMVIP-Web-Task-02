@@ -79,3 +79,8 @@
       body{
           color: rgb(68, 12, 12);
       }
+ .credits{
+        text-align: center;
+        color: grey;
+        padding-top: 10px;
+      }
